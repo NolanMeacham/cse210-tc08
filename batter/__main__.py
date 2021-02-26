@@ -31,8 +31,8 @@ def main(screen):
     cast["bricks"] = []
     for x in range(5, 75):
         for y in range(2, 6):
-            brick = Actor()
-            cast["brick"].append(brick)
+            brick = Brick(x, y)
+            cast["bricks"].append(brick)
 
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y / 2)
