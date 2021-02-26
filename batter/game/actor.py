@@ -1,4 +1,4 @@
-from game import constants
+from game.constants import constants
 from game.point import Point
 
 class Actor:
