@@ -2,6 +2,9 @@ import random
 from game import constants
 from game.director import Director
 from game.actor import Actor
+from game.brick import Brick
+from game.paddle import Paddle
+from game.ball import Ball
 from game.point import Point
 from game.control_actors_action import ControlActorsAction
 from game.draw_actors_action import DrawActorsAction
@@ -24,13 +27,11 @@ def main(screen):
     paddle.set_position(position)
     cast["paddle"] = [paddle]
 
-    cast["brick"] = []
+    # create the bricks and add them to the cast dictionary.
+    cast["bricks"] = []
     for x in range(5, 75):
         for y in range(2, 6):
-            position = Point(x, y)
             brick = Actor()
-            brick.set_text("*")
-            brick.set_position(position)
             cast["brick"].append(brick)
 
     x = int(constants.MAX_X / 2)
