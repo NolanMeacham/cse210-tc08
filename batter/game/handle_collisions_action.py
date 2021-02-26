@@ -20,6 +20,7 @@ class HandleCollisionsAction(Action):
         bricks = cast["bricks"]
         # marquee.set_text("")
         for brick in bricks:
-            if paddle.get_position().equals(bricks).get_position():
-                description = bricks.get_description()
-                # marquee.set_text(description) 
+            if paddle.get_position().equals(brick.get_position()):
+                # description = artifact.get_description()
+                # marquee.set_text(description)
+                pass 
