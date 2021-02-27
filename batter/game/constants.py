@@ -6,3 +6,4 @@ FRAME_LENGTH = 0.1
 PATH = os.path.dirname(os.path.abspath(__file__))
 # MESSAGES = open(PATH + "/messages.txt").read().splitlines()
 BRICKS = 280
+NUM_BALLS = 1
