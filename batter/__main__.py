@@ -19,13 +19,9 @@ def main(screen):
     # create the cast {key: tag, value: list}
     cast = {}
 
-    x = int(constants.MAX_X / 2)
-    y = int(constants.MAX_Y - 1)
-    position = Point(x, y)
-    paddle = Actor()
-    paddle.set_text("===========")
-    paddle.set_position(position)
-    cast["paddle"] = [paddle]
+    # create the paddle and add it to the cast dictionary.
+    paddle = Paddle()
+    cast["paddle"] = [paddle]    
 
     # create the bricks and add them to the cast dictionary.
     cast["bricks"] = []
@@ -36,6 +32,7 @@ def main(screen):
 
     # create the ball and add it to the cast dictionary.
     cast["balls"] = []
+    # this for loop is used in case you want to start with more than one ball.
     for i in range(constants.NUM_BALLS):
         ball = Ball()
         cast["balls"].append(ball)
