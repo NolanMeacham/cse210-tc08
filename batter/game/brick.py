@@ -28,6 +28,7 @@ class Brick(Actor):
         position = Point(x, y)
         self.set_text("*")
         self.set_position(position)
+        self.set_velocity(Point(0,0))
         self._points = 0
 
     def get_points(self):
