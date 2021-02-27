@@ -4,16 +4,19 @@ from game import constants
 
 class Ball(Actor):
     """
+    Ball "is an" Actor.
+    This inherits the attributes and methos of the Actor class.
+    Ball is a game piece that moves around and can bounce.
     
     Stereotype:
         Information Holder
-
-    Attributes:
 
     """
     def __init__(self):
         """
         Class constructor.
+        Initializes the ball to the center of the screen with a velocity that
+        is moving 1 unit to the right an 1 unit up.
 
         Args:
             self (Ball): an instance of Ball.
