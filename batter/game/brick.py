@@ -18,6 +18,12 @@ class Brick(Actor):
     """
     def __init__(self, x, y):
         """
+        Class constructor
+
+        Args:
+            self (Brick): an instance of Brick
+            x (int): a value corresponding to the x position
+            y (int): a value corresponding to the y position
         """
         position = Point(x, y)
         self.set_text("*")
