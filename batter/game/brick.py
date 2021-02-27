@@ -2,12 +2,15 @@ from game.actor import Actor
 from game.point import Point
 
 class Brick(Actor):
-    """
+    """Brick "is an" Actor
+    This inherits the attributes of methods of the Actor class.
+    Brick is a game piece that is destroyed when hit by the ball.
 
     Stereotype:
         Information Holder
 
     Attributes:
+        points (int): the point value for a brick object
 
     
     All other attributes are inherited by the actor class, which holds
@@ -19,11 +22,25 @@ class Brick(Actor):
         position = Point(x, y)
         self.set_text("*")
         self.set_position(position)
+        self._points = 0
 
-        # TODO: If we want, add an attribute _points, which will be the
-        # points that each brick is worth. Then we can create getters/setters
-        # accordingly. This will allow us to have some bricks that are worth
-        # more points or have different text.
+    def get_points(self):
+        """
+        Args:
+            self (Brick): an instance of Brick
+
+        Returns:
+            points(int): the point value for the brick object
+        """
+        return self._points
+
+    def set_points(self, points):
+        """
+        Args:
+            self (Brick): an instance of Brick
+            points (int): the point value for the brick object
+        """
+        self._points = points
 
 
 # # test the class
