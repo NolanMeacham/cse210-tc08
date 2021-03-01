@@ -28,7 +28,7 @@ class HandleCollisionsAction(Action):
                 pass
 
         for x in paddle.return_x_list():
-            if (balls._position._y == 17) and ((balls._position._x -5) < x < (balls._position._x +5)) :
+            if (balls.get_position().get_y() == 17) and ((balls.get_position().get_x() -5) < x < (balls.get_position().get_x() +5)) :
                 balls.set_velocity(balls.get_velocity().horizontal_collision())
 
 
