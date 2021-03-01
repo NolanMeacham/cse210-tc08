@@ -21,10 +21,11 @@ class Paddle(Actor):
             self (Paddle): an instance of Paddle.
         """
         x = int(constants.MAX_X / 2)
-        y = int(constants.MAX_Y - 1)
+        y = int(constants.MAX_Y - 3)
         position = Point(x, y)
         self.set_text("===========")
         self.set_position(position)
+        self.paddle_points = []
 
     def move_left(self):
         """
@@ -47,3 +48,21 @@ class Paddle(Actor):
         new_x = self.get_position().get_x() + 3
         new_y = self.get_position().get_y()
         self.set_position(Point(new_x, new_y))
+
+    def return_x_list(self):
+        x = self.get_position().get_x()
+
+
+        x_list = []
+
+        for i in range(8):
+
+            x += 1
+            x_list.append(x)
+        for i in range(8):
+            x -= 1
+            x_list.append(x)
+
+
+        return x_list
+
