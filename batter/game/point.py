@@ -78,11 +78,26 @@ class Point:
         return Point(x, y)
 
     def vertical_collision(self):
+        """
+        Reverses the x velocity after a vertical collission.
+        A vertical collission would be the left or right wall or
+        hitting one of the bricks from the left or right side.
+
+        Args:
+            self (Point): an instance of Point.
+        """
         x = self._x * -1
         y = self._y * 1
         return Point(x, y)
     
     def horizontal_collision(self):
+        """
+        Reverses the y velocity after a horizontal collission.
+        A horizontal collission would be hitting the paddle or the ceiling.
+
+        Args:
+            self (Point): an instance of Point.
+        """
         x = self._x * 1
         y = self._y * -1
         return Point(x, y)
