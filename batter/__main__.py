@@ -2,6 +2,7 @@ import random
 from game import constants
 from game.director import Director
 from game.actor import Actor
+from game.score import Score
 from game.brick import Brick
 from game.paddle import Paddle
 from game.ball import Ball
@@ -36,6 +37,9 @@ def main(screen):
     for i in range(constants.NUM_BALLS):
         ball = Ball()
         cast["balls"].append(ball)
+    
+    score = Score()
+    cast['score'] = [score]
     
     # create the script {key: tag, value: list}
     script = {}
