@@ -50,6 +50,16 @@ class Paddle(Actor):
         self.set_position(Point(new_x, new_y))
 
     def return_x_list(self):
+        """
+        The paddle is 8 characters wide. This method will create a list of 
+        the x position for each piece of the paddle.
+
+        Args:
+            self (Paddle): an instance of Paddle.
+
+        Returns:
+            x_list (list): holds the x positions for each part of the paddle.
+        """
         x = self.get_position().get_x()
 
 
